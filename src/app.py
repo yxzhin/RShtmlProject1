@@ -15,6 +15,26 @@ def main():
     def index():
         return render_template("index.html")
 
+    @app.route("/ukratko.html")
+    def oNama():
+        return render_template("ukratko.html")
+
+    @app.route("/poznateLicnosti.html")
+    def poznateLicnosti():
+        return render_template("poznateLicnosti.html")
+
+    @app.route("/kontakt.html")
+    def kontakt():
+        return render_template("kontakt.html")
+
+    @app.route("/galerija.html")
+    def galerija():
+        return render_template("galerija.html")
+
+    @app.route("/slika.html")
+    def slika():
+        return render_template("slika.html")
+
     app.run(
         host=conf.server.HOST,
         port=7373,
