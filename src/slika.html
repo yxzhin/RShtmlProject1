@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <head>
+        <title>galerija</title>
+        <link rel="stylesheet" href="./static/css/style.css">
+    </head>
+    <body>
+        <div class="content">
+            <a id="proslaSlika">prosla slika</a>
+            <a id="sledecaSlika">sledeca slika</a>
+            <a href="./galerija.html">povratak u galeriju</a>
+            <a href="./index.html">povratak na glavnu</a>
+            <br>
+            <img id="slika">
+        </div>
+        <script>
+            
+            //with <3 by yxzhin ^^
+
+                function getURLParam(param){
+                    var url = window.location;
+                    let params = new URLSearchParams(url.search);
+                    return params.get(param);
+                }
+
+                var id = getURLParam("id");
+
+                var id_dec = parseInt(id) - 1;
+                if(id_dec == 0) id_dec = 1;
+
+                var id_inc = parseInt(id) + 1;
+                if(id_inc == 11) id_inc = 10;
+
+                let proslaSlika = document.getElementById("proslaSlika");
+                proslaSlika.href=`./slika.html?id=${id_dec}`;
+
+                let sledecaSlika = document.getElementById("sledecaSlika");
+                sledecaSlika.href=`./slika.html?id=${id_inc}`;
+    
+                let slika = document.getElementById("slika");
+                slika.src=`${id}.jpg`;
+            </script>
+    </body>
+</html>
