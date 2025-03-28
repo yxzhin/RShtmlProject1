@@ -37,7 +37,7 @@ def main():
 
     app.run(
         host=conf.server.HOST,
-        port=7373,
+        port=conf.server.PORT,
         debug=True,
     )
 
