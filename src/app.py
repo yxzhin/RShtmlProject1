@@ -16,7 +16,7 @@ def main():
         return render_template("index.html")
 
     @app.route("/ukratko.html")
-    def oNama():
+    def ukratko():
         return render_template("ukratko.html")
 
     @app.route("/poznateLicnosti.html")
