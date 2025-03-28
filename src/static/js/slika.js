@@ -17,10 +17,10 @@ function getURLParam(param){
 var id = getURLParam("id");
 
 var id_dec = parseInt(id) - 1;
-if(id_dec == 0) id_dec = 1;
+if(id_dec == 0) id_dec = 9;
 
 var id_inc = parseInt(id) + 1;
-if(id_inc == 11) id_inc = 10;
+if(id_inc == 10) id_inc = 1;
 
 let proslaSlika = document.getElementById("proslaSlika");
 proslaSlika.href=`./slika.html?id=${id_dec}`;
