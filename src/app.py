@@ -35,6 +35,10 @@ def main():
     def slika():
         return render_template("slika.html")
 
+    @app.route("/memoryGame.html")
+    def memoryGame():
+        return render_template("memoryGame.html")
+
     app.run(
         host=conf.server.HOST,
         port=conf.server.PORT,

@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: url("./../img/IMG_20241126_202222_869.jpg");
+    background-size:cover;
+}
+
+.Menu {
+    text-align: center;
+    margin: 20px;
+}
+
+.transparentBox {
+    width: 737px;
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid black;
+}
+
+.MemoryGame {
+    width: 525px;
+    height: 530px; 
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    perspective: 1000px;
+}
+
+.MemoryCard {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    margin: 5px;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.MemoryCard:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.MemoryCard.flip {
+    transform: rotateY(180deg);
+}
+
+.FrontFace, .BackFace {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    backface-visibility: hidden;
+}
+
+.FrontFace {
+    transform: rotateY(180deg);
+}
+
+.playwrite-au-sa-font {
+  font-family: "Playwrite AU SA", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
